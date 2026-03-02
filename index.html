@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOCMOC — The Ultimate Executor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== ЗВЁЗДНЫЙ ФОН ========== -->
+    <div class="stars-container" id="starsContainer"></div>
+    <div class="nebula nebula-1"></div>
+    <div class="nebula nebula-2"></div>
+    <div class="nebula nebula-3"></div>
+    <div class="nebula nebula-4"></div>
+
+    <!-- ========== SHOOTING STARS ========== -->
+    <div class="shooting-stars">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+
+    <!-- ========== CURSOR GLOW ========== -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- ========== НАВИГАЦИЯ ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">KOCMOC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#showcase" class="nav-link">Showcase</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+            <a href="#download" class="nav-cta">
+                <span>Download</span>
+                <i class="fas fa-rocket"></i>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <span class="badge-dot"></span>
+                <span>Version 1.0 — Now Available</span>
+            </div>
+
+            <h1 class="hero-title" data-aos="fade-up">
+                <span class="title-line">Welcome to</span>
+                <span class="title-main">
+                    <span class="letter" style="--i:0">K</span>
+                    <span class="letter" style="--i:1">O</span>
+                    <span class="letter" style="--i:2">C</span>
+                    <span class="letter" style="--i:3">M</span>
+                    <span class="letter" style="--i:4">O</span>
+                    <span class="letter" style="--i:5">C</span>
+                </span>
+            </h1>
+
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                The most beautiful and powerful executor in the galaxy.<br>
+                Experience the cosmos while you execute.
+            </p>
+
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                <a href="#download" class="btn btn-primary">
+                    <span class="btn-bg"></span>
+                    <span class="btn-content">
+                        <i class="fas fa-download"></i>
+                        <span>Download Now</span>
+                    </span>
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    <span class="btn-content">
+                        <i class="fas fa-star"></i>
+                        <span>Explore Features</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="50000">0</span>
+                    <span class="stat-label">Downloads</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="99">0</span>
+                    <span class="stat-label">Uptime %</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-target="10000">0</span>
+                    <span class="stat-label">Users</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating UI Preview -->
+        <div class="hero-preview" data-aos="zoom-in" data-aos-delay="500">
+            <div class="preview-window">
+                <div class="preview-titlebar">
+                    <div class="preview-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="preview-title">✦ KOCMOC Executor</span>
+                </div>
+                <div class="preview-body">
+                    <div class="preview-sidebar">
+                        <div class="preview-nav-item active">⚡</div>
+                        <div class="preview-nav-item">📜</div>
+                        <div class="preview-nav-item">ℹ</div>
+                        <div class="preview-nav-item">⚙</div>
+                    </div>
+                    <div class="preview-content">
+                        <div class="preview-code">
+                            <span class="code-comment">-- ✦ KOCMOC Executor</span><br>
+                            <span class="code-keyword">local</span> <span class="code-var">player</span> = <span class="code-func">game.Players.LocalPlayer</span><br>
+                            <span class="code-keyword">print</span>(<span class="code-string">"Welcome to KOCMOC"</span>)<br>
+                            <span class="code-cursor">|</span>
+                        </div>
+                        <div class="preview-buttons">
+                            <span class="preview-btn">⚡ Inject</span>
+                            <span class="preview-btn">▶ Execute</span>
+                            <span class="preview-btn">🗑 Clear</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-glow"></div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURES SECTION ========== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">✦ Features</span>
+                <h2 class="section-title">Why Choose <span class="gradient-text">KOCMOC</span>?</h2>
+                <p class="section-subtitle">Every feature crafted with precision and cosmic beauty</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <div class="icon-glow"></div>
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Instant injection with zero delay. Your scripts execute at the speed of light.</p>
+                    <div class="feature-decoration"></div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon cyan">
+                        <div class="icon-glow cyan"></div>
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Undetected</h3>
+                    <p>Advanced bypass technology keeps you invisible. Stay safe among the stars.</p>
+                    <div class="feature-decoration"></div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon pink">
+                        <div class="icon-glow pink"></div>
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Cosmic Design</h3>
+                    <p>Stunning space-themed UI with animated stars, nebulae and smooth animations.</p>
+                    <div class="feature-decoration"></div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon green">
+                        <div class="icon-glow green"></div>
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <h3>Script Hub</h3>
+                    <p>Built-in ScriptBlox integration. Search and execute thousands of scripts instantly.</p>
+                    <div class="feature-decoration"></div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon orange">
+                        <div class="icon-glow orange"></div>
+                        <i class="fas fa-rotate"></i>
+                    </div>
+                    <h3>Auto Updates</h3>
+                    <p>Always up to date. KOCMOC updates itself automatically after every patch.</p>
+                    <div class="feature-decoration"></div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon purple">
+                        <div class="icon-glow purple"></div>
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full Lua Support</h3>
+                    <p>Complete Lua executor with syntax highlighting, auto-complete and error handling.</p>
+                    <div class="feature-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SHOWCASE SECTION ========== -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">✦ Showcase</span>
+                <h2 class="section-title">Beauty Meets <span class="gradient-text">Power</span></h2>
+                <p class="section-subtitle">Take a closer look at the KOCMOC experience</p>
+            </div>
+
+            <div class="showcase-grid">
+                <div class="showcase-card main" data-aos="fade-right">
+                    <div class="showcase-visual">
+                        <div class="mock-window">
+                            <div class="mock-titlebar">
+                                <div class="mock-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <span>✦ KOCMOC</span>
+                            </div>
+                            <div class="mock-body">
+                                <div class="mock-stars"></div>
+                                <div class="mock-editor">
+                                    <div class="mock-line"><span class="mock-ln">1</span> <span class="c-comment">-- Cosmic Script</span></div>
+                                    <div class="mock-line"><span class="mock-ln">2</span> <span class="c-kw">local</span> ESP = <span class="c-kw">require</span>(<span class="c-str">"ESP"</span>)</div>
+                                    <div class="mock-line"><span class="mock-ln">3</span> ESP:<span class="c-fn">Enable</span>()</div>
+                                    <div class="mock-line"><span class="mock-ln">4</span> <span class="c-fn">print</span>(<span class="c-str">"✦ Active"</span>)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>Script Editor</h3>
+                        <p>Professional code editor with syntax highlighting and cosmic aesthetics</p>
+                    </div>
+                </div>
+
+                <div class="showcase-card" data-aos="fade-left" data-aos-delay="100">
+                    <div class="showcase-mini-visual">
+                        <div class="mini-scripthub">
+                            <div class="mini-search">🔍 Search scripts...</div>
+                            <div class="mini-card-grid">
+                                <div class="mini-script-card">
+                                    <span class="mini-title">Infinite Yield</span>
+                                    <span class="mini-game">Universal</span>
+                                </div>
+                                <div class="mini-script-card">
+                                    <span class="mini-title">ESP Script</span>
+                                    <span class="mini-game">Arsenal</span>
+                                </div>
+                                <div class="mini-script-card">
+                                    <span class="mini-title">Auto Farm</span>
+                                    <span class="mini-game">Blox Fruits</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>Script Hub</h3>
+                        <p>Thousands of scripts at your fingertips</p>
+                    </div>
+                </div>
+
+                <div class="showcase-card" data-aos="fade-left" data-aos-delay="200">
+                    <div class="showcase-mini-visual">
+                        <div class="mini-settings">
+                            <div class="setting-row">
+                                <span>Auto-inject</span>
+                                <div class="toggle on"></div>
+                            </div>
+                            <div class="setting-row">
+                                <span>Topmost</span>
+                                <div class="toggle"></div>
+                            </div>
+                            <div class="setting-row">
+                                <span>Opacity</span>
+                                <div class="slider-bar"><div class="slider-fill"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>Settings</h3>
+                        <p>Customize everything to your preference</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STATS SECTION ========== -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="stat-icon"><i class="fas fa-download"></i></div>
+                    <div class="stat-value" data-target="50000">0</div>
+                    <div class="stat-name">Total Downloads</div>
+                    <div class="stat-bar"><div class="stat-bar-fill" style="--width: 92%"></div></div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon cyan"><i class="fas fa-users"></i></div>
+                    <div class="stat-value" data-target="10000">0</div>
+                    <div class="stat-name">Active Users</div>
+                    <div class="stat-bar"><div class="stat-bar-fill cyan" style="--width: 78%"></div></div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon pink"><i class="fas fa-code"></i></div>
+                    <div class="stat-value" data-target="5000">0</div>
+                    <div class="stat-name">Scripts Available</div>
+                    <div class="stat-bar"><div class="stat-bar-fill pink" style="--width: 85%"></div></div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon green"><i class="fas fa-clock"></i></div>
+                    <div class="stat-value" data-target="99">0</div>
+                    <div class="stat-name">Uptime %</div>
+                    <div class="stat-bar"><div class="stat-bar-fill green" style="--width: 99%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DOWNLOAD SECTION ========== -->
+    <section class="download-section" id="download">
+        <div class="container">
+            <div class="download-card" data-aos="fade-up">
+                <div class="download-bg">
+                    <div class="download-nebula"></div>
+                    <div class="download-stars"></div>
+                </div>
+                <div class="download-content">
+                    <span class="download-badge">✦ Free Download</span>
+                    <h2>Ready to Launch?</h2>
+                    <p>Join thousands of users exploring the cosmos with KOCMOC executor</p>
+                    <div class="download-buttons">
+                        <a href="#" class="btn btn-download">
+                            <span class="btn-bg"></span>
+                            <span class="btn-content">
+                                <i class="fab fa-windows"></i>
+                                <div class="btn-text">
+                                    <span class="btn-small">Download for</span>
+                                    <span class="btn-large">Windows</span>
+                                </div>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="download-info">
+                        <span><i class="fas fa-check"></i> No virus</span>
+                        <span><i class="fas fa-check"></i> Free forever</span>
+                        <span><i class="fas fa-check"></i> Auto updates</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">✦ FAQ</span>
+                <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+
+            <div class="faq-list" data-aos="fade-up">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is KOCMOC free to use?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! KOCMOC is completely free and always will be. No hidden fees, no premium versions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is it safe to use?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>KOCMOC uses advanced bypass technology and is regularly updated to stay undetected. We take security seriously.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do I install KOCMOC?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply download the installer, run it, and KOCMOC will be ready to use. No complex setup required.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Does the Script Hub update automatically?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! The Script Hub pulls scripts directly from ScriptBlox, so you always have access to the latest scripts.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What games does it support?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>KOCMOC supports all Roblox games. With our Script Hub, you can find scripts for virtually any game.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">✦</span>
+                        <span>KOCMOC</span>
+                    </div>
+                    <p>The most beautiful executor in the galaxy</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#download">Download</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">Changelog</a>
+                    <a href="#">Status</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 KOCMOC. All rights reserved. ✦ Made with cosmic energy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
